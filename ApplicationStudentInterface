@@ -1,0 +1,94 @@
+package main
+
+
+import "fmt"
+
+
+type Ericsson struct {
+              TheTeam
+              SmartStudent
+              TheJob
+}
+type TheTeam interface {
+               WhatWeDo()
+               LookingFor()
+}
+type SmartStudent struct {
+               TheApplicant
+               TheApplication
+}
+type TheApplicant interface {
+              MustHave()
+              GoodToHave()
+}
+type TheJob interface {
+              HowToApply()
+}
+type TheApplication interface {
+              YourIntro()
+              YourStrengths()
+              YourMotivationToJoin()
+}
+func NewEricsson() *Ericsson {
+               fmt.Println("==== Attention for all talented developers in ongoing study! ==== ")
+               return &Ericsson{}
+}
+
+func NewSmartStudent() *SmartStudent {
+    fmt.Println("\n\n *****************************\n I like coding  : -) \n  *****************************")
+               return &SmartStudent{}
+}
+func (e *Ericsson) WhatWeDo() {
+            fmt.Println("We in Ericsson Frankfurt are working on cutting-edge Permissioned Blockchain based Applications. \n" +
+                        "Our team works in agile environments with newest technologies and software engineering paradigms. \n" +
+                        "We employ Hyperledger Fabric to develop our Blockchain Infrastructures and Applications. \n" +
+                        "We are continuously evaluating other frameworks under Hyperledger to make the system more robust. \n" )
+}
+func (e *Ericsson) LookingFor() {
+            fmt.Println("*** Looking for *** \n" +
+                        "You, passionate student, who have an interest in software development and ready to learn something new every day")
+            e.MustHave()
+            e.GoodToHave()
+}
+func (e *Ericsson) MustHave() {
+            fmt.Println("Must haves: \n" +
+                         "- Studying Computer Science, Software Engineering or related \n" +
+                         "- Strong in analytical skills with desire to solve complicated problems programmatically \n" +
+                         "- Proficient in Functional and/or Object Oriented programming languages (e.g., Go, Scala)")
+}
+func (e *Ericsson) GoodToHave() {
+            fmt.Println("Good to have: \n" +
+                         "- Experience with frontend frameworks such as Angular or React")
+}
+func (e *Ericsson) HowToApply() {
+            fmt.Println("*** How to apply *** \n" +
+                         "Complete 'TheApplication' interface and submit the working code along with your CV at: \n" +
+                         "https://performancemanager12.successfactors.eu/sfcareer/jobreqcareer?jobId=259248&company=Ericsson&username= \n" +
+                         "Looking forward to hear from you soon. \n" +
+                         "E/// Recruitment and Development Team.")
+}
+
+func (e *SmartStudent) MyIntro() {
+            fmt.Println("\n\nMy Intro : \nMy name is chetan chadha. I am 25 years old. \nI had been working for Mercedes benz research and development, India \nas a full stack developer. Currently I am persuing my masters in \nInformation Technology from Frankfurt University of applied science")
+}
+
+func (e *SmartStudent) YourStrengths() {
+            fmt.Println("\n\nTalking about my strengths, I am a very postive and hard working person. \nI am a very honest person. I like to work in a team and always discuss \nand understand the requirements well before I start my work. \nI have good communication skills too. \nTalking about my domain knowledge, \nI have good knowledge about object oriented programming and have good analytical skills.")
+}
+
+func (e *SmartStudent) YourMotivationToJoin() {
+            fmt.Println("\n\nMy Motivation letter \n\nDear Sir/Madam,\n\nI am writing this letter to apply for the Working Student Job in \nyour esteemed organization. I am pursuing my master’s degree from \nthe Frankfurt University Of Applied Science with Software and web application development \nas my Major specialization. I have 3 years of industrial experience in \nsoftware and web application development using the latest technologies available \nin the market and have a deep interest in the field of information technology \nwhich motivated me to pursue my master’s degree. I am interested in your position \nfor software development as a working student and to learn new technologies.\nI have been part of the software development process for 2.4 Years, in my 3 years of \nprofessional work experience at Mercedes Benz Research And Development, India. I got the \nopportunity to work on Spring Boot, Java, Angular 5, some of the leading technologies \nin the market. I was working in a team environment that followed the best \ncoding practices in the industry and we're determined to develop software that is stable \nand well documented. To achieve this we used tools like Jenkins, Git, Jira. \nWe followed agile methodologies like a daily standup, \ncontinuous integration and development. For this purpose, we developed a CI/ CD pipeline \nfor smooth development. Also, I was working on 3 software development projects which used \nspring framework and technologies like Java, Javascript, Angular 5, React-JS, Hibernate\n, HTML, CSS, Bootstrap. We used to communicate with our team from Germany and understand \ntheir requirements to develop the product with minimal re-work. I believe that 2.4 years \nof working experience in the Software industry has earned me the right attitude and fine \ntemperament to be a part of Ericsson.My ability to work under pressure situations and \nformulating well-defined plans helped me secure good grades in my bachelor's. \nI see myself as a quick learner who never hesitates to imbibe and learn new things. \nThis project I have done while being a part of Mercedes Benz Research And Development, \nIndia Ltd(https://media.daimler.com/marsMediaSite/en/instance/ko/Daimler-and- HERE-to-bring-HD-Live-Map-to-future-Mercedes-Benz-models.xhtml?oid=33472763) \nand where I practiced the technologies being currently employed leading to the successful \ncompletion of all the projects. I consider myself as a team player with \nexcellent client-facing and communication skills who can collaborate with different teams \nto meet high-performance standards. I believe that Ericsson is an excellent ground for me \nto enhance my skills. I will have infinite opportunities to learn and improve, \nwhich will help in my personal and professional growth. I look forward to \nplaying a significant role and being a part of your company. \nThank you for your time and consideration and I would be happy to discuss \nmy application further with you.Yours faithfully, \n\nChetan Chadha")
+}
+
+func main() {
+              erc := NewEricsson()
+              erc.WhatWeDo()
+              erc.LookingFor()
+              erc.HowToApply()
+              
+              // My code
+              smartStudent := NewSmartStudent()
+              smartStudent.MyIntro()
+              smartStudent.YourStrengths()
+              smartStudent.YourMotivationToJoin()
+} 
